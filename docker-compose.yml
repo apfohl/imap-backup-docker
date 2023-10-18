@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  imap-backup:
+    build: .
+    restart: unless-stopped
+    volumes:
+      - data:/root/.imap-backup 
+
+volumes:
+  data:
